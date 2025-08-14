@@ -9,6 +9,8 @@ Welcome to the official repository for **TechzyNerd.com** — my personal websit
 - **General cleanup** – Removed old/unused files and simplified the folder structure.
 - **New Project** – 14/9/25 -- Added new project i am so happy making new porjects.
 
+Blog Post very week at Saturday 10:00 Morning 
+
 ## 🌐 Live Website
 Visit **[TechzyNerd.com](https://techzynerd.com)** (hosted with GitHub Pages).
 
