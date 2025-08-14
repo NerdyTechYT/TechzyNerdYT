@@ -7,6 +7,7 @@ Welcome to the official repository for **TechzyNerd.com** — my personal websit
 - **Manual blog system** – Added a simple HTML blog layout that’s easy to update without a backend.
 - **UI polish** – Improved styling with cleaner navigation and consistent color theme.
 - **General cleanup** – Removed old/unused files and simplified the folder structure.
+- **New Project** – 14/9/25 -- Added new project i am so happy making new porjects.
 
 ## 🌐 Live Website
 Visit **[TechzyNerd.com](https://techzynerd.com)** (hosted with GitHub Pages).
