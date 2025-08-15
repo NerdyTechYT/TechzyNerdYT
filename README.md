@@ -8,6 +8,7 @@ Welcome to the official repository for **TechzyNerd.com** — my personal websit
 - **UI polish** – Improved styling with cleaner navigation and consistent color theme.
 - **General cleanup** – Removed old/unused files and simplified the folder structure.
 - **New Project** – 14/9/25 -- Added new project i am so happy making new porjects.
+-  **Mobile Responisvity** – 15/9/25 -- added Mobile responsive nav menu really cool with ChatGPT help.
 
 Blog Post very week at Saturday 10:00 Morning 
 
