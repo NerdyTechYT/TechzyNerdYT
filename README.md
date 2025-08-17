@@ -24,7 +24,7 @@ Here, you'll find information about the creator, featured projects, tutorials, a
 
 ## 📝 Update Log
 
-### [v1.4.1] - 2025-09-16 ✨
+### [v1.5] - 2025-09-16 ✨
 - Restructured website with a clean and modern folder/file organization  
 - Added **3 completed projects** to the Projects section  
 - Improved overall visual design and layout  
