@@ -1,5 +1,6 @@
+/* RESPONSIVITY ENHANCED */
 
-/* RESPONSIVE */
+/* Extra large tablets / small laptops */
 @media (max-width: 1024px) {
   .navbar {
     padding: 1rem 2rem;
@@ -7,11 +8,20 @@
   .hero h1 {
     font-size: 3rem;
   }
+  .cards-grid, .videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
   .nav-links {
     gap: 1rem;
+    flex-direction: column; /* vertical menu for mobile */
   }
 
   .hero h1 {
@@ -23,52 +33,18 @@
     font-size: 1.1rem;
   }
 
-  .videos-grid {
-    grid-template-columns: 1fr;
+  .cards-grid, .videos-grid {
+    grid-template-columns: 1fr; /* single column */
   }
 
-  .cards-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 4rem 1rem 3rem;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .section {
-    margin: 3rem 1rem;
-  }
-}
-
-
-
-/* Hide the hamburger on desktop */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  z-index: 110; /* above the menu */
-}
-
-/* Mobile menu styles */
-@media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: block; /* show hamburger menu */
   }
 
-  /* Make nav-links a hidden side menu */
   .nav-links {
     position: fixed;
     top: 0;
-    left: -250px; /* hide off-screen */
+    left: -250px; 
     height: 100%;
     width: 250px;
     background-color: var(--primary-color);
@@ -81,7 +57,6 @@
     z-index: 100;
   }
 
-  /* When active, slide into view */
   .nav-links.active {
     left: 0;
   }
@@ -93,14 +68,52 @@
   }
 }
 
+/* Phones / small screens */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
 
-/* FOOTER */
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 1.3rem 2rem;
-  margin-top: auto;
-  font-size: 0.95rem;
-  user-select: none;
+  header, footer {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 4rem 1rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .section {
+    margin: 3rem 1rem;
+  }
+
+  .project-card, .blog-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  img, video {
+    width: 100%;
+    height: auto;
+  }
+
+  .container, .main-content {
+    padding: 10px;
+  }
+
+  .cards-grid, .videos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FOOTER (adjust for small screens) */
+@media (max-width: 768px) {
+  footer {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
 }
