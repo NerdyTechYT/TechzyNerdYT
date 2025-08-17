@@ -1,24 +1,60 @@
 # TechzyNerd Website
 
-Welcome to the official repository for **TechzyNerd.com** — my personal website where I share tech projects, videos, and experiments.
+Welcome to **TechzyNerd**, a personal tech blog and project showcase website.  
+Here you will find information about the creator, projects, tutorials, and more!
 
-## 🚀 What's New in This Update
-- **First-time visitor popup** – Now a friendly message appears once for new visitors (using JavaScript + localStorage).
-- **Manual blog system** – Added a simple HTML blog layout that’s easy to update without a backend.
-- **UI polish** – Improved styling with cleaner navigation and consistent color theme.
-- **General cleanup** – Removed old/unused files and simplified the folder structure.
-- **New Project** – 14/9/25 -- Added new project i am so happy making new porjects.
--  **Mobile Responisvity** – 15/9/25 -- added Mobile responsive nav menu really cool with ChatGPT help.
+---
 
-Blog Post very week at Saturday 10:00 Morning 
+## 🌐 Website Links
+- **Live Website:** [https://techzynerd.com](https://techzynerd.com)
+- **YouTube Channel:** [TechzyNerd YouTube](https://www.youtube.com/channel/yourchannel)
+- **GitHub Repository:** [GitHub](https://github.com/yourusername/techzynerd)
 
-## 🌐 Live Website
-Visit **[TechzyNerd.com](https://techzynerd.com)** (hosted with GitHub Pages).
+---
 
-## 🛠 Tech Stack
-- **HTML5** – Page structure  
-- **CSS3** – Styling and layout  
-- **JavaScript** – Popup logic and other interactive elements  
-- **GitHub Pages** – Free static hosting
+## 🚀 Features
+- Responsive design for mobile and desktop
+- Smooth navigation and modern UI
+- Project showcase section
+- Blogs/tutorials section
+- Contact form integration
 
+---
 
+## 📝 Update Log
+
+### [v1.3.0] - 2025-08-17
+- Redesigned homepage layout with modern cards
+- Added mobile-friendly side navigation menu
+- Improved color theme for better accessibility
+- Optimized images for faster loading
+
+### [v1.2.0] - 2025-07-23
+- Added Projects section with GitHub and YouTube links
+- Added About section
+- Improved footer design
+- Minor bug fixes on responsive layout
+
+### [v1.1.0] - 2025-07-12
+- Initial launch of TechzyNerd
+- Homepage, About, Contact sections
+- Basic CSS styling and responsive layout
+
+---
+
+## 🛠️ Technologies Used
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Frameworks/Libraries:** None (pure vanilla JS & CSS)
+- **Deployment:** GitHub Pages / Your Hosting Provider
+
+---
+
+## 📄 License
+This project is licensed under the MIT License.  
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🤝 Contribution
+Contributions, issues, and feature requests are welcome!  
+Feel free to fork this repository and submit a pull request.
