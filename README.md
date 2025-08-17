@@ -35,19 +35,19 @@ Here, you'll find information about the creator, featured projects, tutorials, a
 - Updated color palette for better contrast and readability  
 - Fixed multiple broken links  
 
-### [v1.3.0] - 2025-09-10 🛠️
+### [v1.3] - 2025-09-10 🛠️
 - Redesigned homepage with modern card layout  
 - Added mobile-friendly side navigation menu  
 - Optimized images for faster loading  
 - Improved color theme for accessibility  
 
-### [v1.2.0] - 2025-09-5 ✨
+### [v1.2] - 2025-09-5 ✨
 - Added Projects section with GitHub & YouTube links  
 - Introduced About section  
 - Improved footer design  
 - Minor responsive layout bug fixes  
 
-### [v1.1.0] - 2025-9-1🚀
+### [v1.1] - 2025-9-1🚀
 - Initial website launch  
 - Sections: Homepage, About, Contact  
 - Basic CSS styling and responsive layout  
