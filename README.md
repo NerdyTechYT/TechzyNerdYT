@@ -61,12 +61,6 @@ Here, you'll find information about the creator, featured projects, tutorials, a
 
 ---
 
-## 📄 License
-This project is licensed under the **MIT License**.  
-See the [LICENSE](LICENSE) file for details.
-
----
-
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!  
 Feel free to fork this repository and submit a pull request.
