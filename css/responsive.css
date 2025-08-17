@@ -117,3 +117,28 @@
     font-size: 0.9rem;
   }
 }
+
+
+
+/* Fix extra side margin on mobile */
+@media (max-width: 480px) {
+  body, html {
+    overflow-x: hidden; /* prevent horizontal scrolling */
+    margin: 0;
+    padding: 0;
+  }
+
+  .container, .main-content, .section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero h1, .project-card, .blog-card, .btn-primary {
+    font-size: 1.6rem; /* slightly smaller text for mobile */
+  }
+
+  .project-card, .blog-card {
+    width: 95%; /* make cards wider and fit screen */
+    margin: 10px auto;
+  }
+}
