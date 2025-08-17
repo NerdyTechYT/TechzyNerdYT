@@ -1,0 +1,106 @@
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .btn-primary {
+    padding: 0.7rem 1.8rem;
+    font-size: 1.1rem;
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 1rem 3rem;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .section {
+    margin: 3rem 1rem;
+  }
+}
+
+
+
+/* Hide the hamburger on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 110; /* above the menu */
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Make nav-links a hidden side menu */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -250px; /* hide off-screen */
+    height: 100%;
+    width: 250px;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.3);
+    transition: left 0.3s ease-in-out;
+    z-index: 100;
+  }
+
+  /* When active, slide into view */
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+    width: 100%;
+    display: block;
+  }
+}
+
+
+/* FOOTER */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1.3rem 2rem;
+  margin-top: auto;
+  font-size: 0.95rem;
+  user-select: none;
+}

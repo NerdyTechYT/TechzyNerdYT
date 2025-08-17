@@ -1,0 +1,21 @@
+.project-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-top: auto;
+  font-size: 2em;  /* bigger font */
+  user-select: none;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
