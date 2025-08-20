@@ -23,12 +23,15 @@ Here, you'll find information about the creator, featured projects, tutorials, a
 ---
 
 ## 📝 Update Log
-
+**Launched a new subdomain: game.techzynerd.com
+ for TechzyGames** BEST GAME check the repo out https://github.com/NerdyTechYT/TechzyGames
+ 
 ### [v1.5] - 2025-09-16 ✨
 - Restructured website with a clean and modern folder/file organization  
 - Added **3 completed projects** to the Projects section  
 - Improved overall visual design and layout  
-- Made buttons more accessible and user-friendly  
+- Made buttons more accessible and user-friendly
+- 
 
 ### [v1.4] - 2025-09-15🎨
 - Focused on accessibility improvements  
