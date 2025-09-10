@@ -1,133 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TechzyNerd - Home</title>
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="css/about.css" />
-  <link rel="stylesheet" href="css/blog.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Site Closed — We'll be Back Soon</title>
+
+  <!--
+    Single-file close/maintenance page.
+    Edit the JS `CONFIG` object to change title, message, and countdown.
+  -->
+
+  <style>
+    :root{
+      --bg1: #0f172a; /* dark navy */
+      --bg2: #051025; /* deeper */
+      --card: rgba(255,255,255,0.06);
+      --glass: rgba(255,255,255,0.04);
+      --accent: #7c3aed; /* violet */
+      --accent-2: #06b6d4; /* cyan */
+      --text: #e6eef8;
+      --muted: rgba(230,238,248,0.7);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{height:100%;}
+    body{
+      margin:0;
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: radial-gradient(1200px 600px at 10% 20%, rgba(124,58,237,0.12), transparent),
+                  radial-gradient(900px 400px at 90% 80%, rgba(6,182,212,0.08), transparent),
+                  linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      box-sizing:border-box;
+    }
+
+    .card{
+      width:100%;
+      max-width:820px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:16px;
+      padding:32px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:24px;
+      align-items:center;
+    }
+
+    .left{
+      padding-right:8px;
+    }
+
+    .logo{
+      display:flex;gap:12px;align-items:center;margin-bottom:8px;
+    }
+    .logo svg{width:44px;height:44px}
+    .brand{font-weight:700;font-size:18px;letter-spacing:0.2px}
+    .tag{font-size:13px;color:var(--muted);}
+
+    h1{margin:8px 0 6px;font-size:28px}
+    p.lead{margin:0;color:var(--muted);line-height:1.45}
+
+    .countdown{
+      margin-top:18px;display:flex;gap:14px;flex-wrap:wrap;
+    }
+    .countdown .item{
+      min-width:70px;background:var(--card);padding:12px;border-radius:10px;text-align:center;
+    }
+    .countdown .num{font-weight:700;font-size:18px}
+    .countdown .lbl{font-size:12px;color:var(--muted);margin-top:6px}
+
+    .right{
+      background:var(--glass);padding:18px;border-radius:12px;display:flex;flex-direction:column;gap:14px;align-items:stretch;
+    }
+    label{font-size:13px;color:var(--muted);}
+    input[type=email]{
+      width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);outline:none;font-size:14px
+    }
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;justify-content:center;padding:10px 14px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;font-weight:600;cursor:pointer;font-size:14px
+    }
+
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{grid-column:1/-1;margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:880px){
+      .card{grid-template-columns:1fr;}
+      .right{order:-1}
+    }
+  </style>
 </head>
 <body>
-  <header>
-<nav class="navbar">
-  <div class="logo"><a href="https://techzynerd.com">TechzyNerd</a></div>
+  <article class="card" aria-labelledby="title" role="article">
+    <div class="left">
+      <div class="logo">
+        <!-- simple SVG logo placeholder -->
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="4" y="4" width="40" height="40" rx="8" fill="url(#g)" />
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#7c3aed" />
+              <stop offset="1" stop-color="#06b6d4" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div>
+          <div class="brand" id="brand">TechzyNerd</div>
+          <div class="tag">Temporarily closed</div>
+        </div>
+      </div>
 
-  <!-- Hamburger Button -->
-  <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <h1 id="title">We'll be back soon</h1>
+      <p class="lead" id="message">We're doing some maintenance and making improvements. Thanks for your patience — sign up and we'll notify you when we're back online.</p>
 
-  <!-- Side Menu -->
-  <ul class="nav-links" id="nav-links">
-    <li><a href="https://techzynerd.com/about">About</a></li>
-    <li><a href="https://techzynerd.com/projects">Projects</a></li>
-    <li><a href="https://techzynerd.com/blogs">Blogs</a></li>
-    <li><a href="https://techzynerd.com/contact">Contact</a></li>
-  </ul>
-</nav>
-  </header>
+      <div class="countdown" id="countdown" aria-hidden="true">
+        <!-- filled by JS -->
+      </div>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="section hero">
-      <h1>Welcome to TechzyNerd</h1>
-      <p>Your hub for tech tutorials, projects, and insightful blogs.</p>
-      <a href="#projects" class="btn-primary">Explore Projects</a>
-    </section>
-<!-- About Me Section -->
-<section id="about" class="section about">
-  <div class="about-container">
-    <!-- Left side: text -->
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm <strong>Techzy Nerd</strong> — a student, tech enthusiast, and creator.  
-        I love building websites, exploring programming, and sharing knowledge with others.  
-        My goal? To make tech simple, fun, and accessible for everyone.
-      </p>
-      <p>
-        On this site you'll find my personal projects, tutorials, and videos.  
-        When I'm not coding, I'm probably tinkering with gadgets or creating digital art.
-      </p>
-      <a href="about.html" class="btn-secondary">Learn More</a>
     </div>
 
-    <!-- Right side: image -->
-    <div class="about-image">
-      <img src="Images/Logo.png" alt="Techzy Nerd Profile Picture" />
-    </div>
-  </div>
-</section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-      <div class="cards-grid">
-        <article class="project-card">
-          <h3>WP website</h3>
-          <p>I created a WP website for myself and it looked good but now I moved to coded site.</p>
-          <a href="https://speefyleef.unaux.com/?i=1" class="btn-secondary" target="_blank" rel="noopener noreferrer">View Project</a>
-        </article>
-        <article class="project-card">
-          <h3>StopWatch</h3>
-          <p>I created a StopWatch using HTML, CSS, and JavaScript. It looks amazing!</p>
-          <a href="#" class="btn-secondary">View Project</a>
-        </article>
-        <article class="project-card">
-          <h3>Scratch Animation</h3>
-          <p>I created a Scratch animation that was featured on the Scratch homepage — amazing, right?</p>
-          <a href="https://scratch.mit.edu/projects/1159094965/" class="btn-secondary" target="_blank" rel="noopener noreferrer">View Project</a>
-        </article>
+    <aside class="right" aria-label="Contact and updates">
+      <div>
+        <label for="email">Get notified when we're back</label>
+        <input id="email" type="email" placeholder="ilovenothing@nothing.com" aria-label="Email address" />
       </div>
-    </section>
-
-    <!-- Videos Section -->
-    <section id="videos" class="section">
-      <h2>Recent Videos</h2>
-      <div class="videos-grid">
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed/eRocTLvJiMg" title="Is Your Desktop a Mess? Try This 1 Tip for an Easy Fix!" allowfullscreen></iframe>
-          <h4>Is Your Desktop a Mess? Try This 1 Tip for an Easy Fix!</h4>
-        </article>
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed/5cDfhQQzDvg" title="Techzy Nerd Beta Website Launch" allowfullscreen></iframe>
-          <h4>🌐 I Present You... Techzy Nerd Beta Website Launch 🚀</h4>
-        </article>
-        <article class="video-card">
-          <iframe src="https://www.youtube.com/embed/TT0wYXMHTuQ" title="Build a Website with ChatGPT Tutorial" allowfullscreen></iframe>
-          <h4>Build a Website with ChatGPT in 3 Minutes (Step-by-Step Tutorial)</h4>
-        </article>
+      <div style="display:flex;gap:10px;">
+        <button class="btn" id="notifyBtn">Notify me</button>
+        <button class="btn" id="contactBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);">Contact</button>
       </div>
-    </section>
 
-    <!-- Blogs Section -->
-    <section id="blogs" class="section">
-      <h2>Recent Blogs</h2>
-      <div class="blogs-list">
-        <article class="blog-post">
-          <h3>Youtube Launch</h3>
-          <p>My Youtube Launch Click to Learn More.</p>
-          <a href="BlogsPosts/welcome" class="btn-secondary">Read More</a>
-        </article>
-        <article class="blog-post">
-          <h3>I am taking a break</h3>
-          <p>I need a short 1-2 week break from updating this site sorry :D</p>
-          <a href="BlogsPosts/Break" class="btn-secondary">Read More</a>
-        </article>
-        <!--<article class="blog-post"> -->
-      </div>
-    </section>
-  </main>
+      <div class="small">Need to reach us urgently? Email <a id="contactEmail" href="mailto:nerdztechyt@gmail.com">nerdztechyt@gmail.com</a></div>
+      <div class="small" style="margin-top:6px">Page built with ❤️ — close.html</div>
+    </aside>
 
-  <footer>
-    <p>© 2025 TechzyNerd. All rights reserved.</p>
-  </footer>
-  <script src="js/main.js"></script>
+    <footer>
+      <div id="foottext">Sorry this website may be closed for a while  <code>close.html.</div>
+    </footer>
+  </article>
 
+  <script>
+    // ---------- CONFIG ----------
+    const CONFIG = {
+      siteName: 'TechzyNerd',
+      title: "We're temporarily closed",
+      message: "We're making improvements. Thanks for your patience — sign up and we'll notify you when we're back online.",
+      contactEmail: 'support@techzynerd.example',
+
+      // Countdown: set useCountdown to true and choose a future ISO date string. If false, countdown is hidden.
+      useCountdown: false,
+      reopenDateISO: '2025-10-01T09:00:00+01:00',
+
+      // Where to POST emails (leave null to keep client-only demo)
+      emailEndpoint: null // example: 'https://api.example.com/notify'
+    };
+    // -----------------------------
+
+    // apply text
+    document.getElementById('brand').textContent = CONFIG.siteName;
+    document.getElementById('title').textContent = CONFIG.title;
+    document.getElementById('message').textContent = CONFIG.message;
+    const contactEmail = document.getElementById('contactEmail');
+    contactEmail.href = 'mailto:' + CONFIG.contactEmail;
+    contactEmail.textContent = CONFIG.contactEmail;
+
+    // countdown
+    function pad(n){return String(n).padStart(2,'0')}
+    const countdownEl = document.getElementById('countdown');
+    function makeCountdown(date){
+      const parts = ['days','hours','minutes','seconds'];
+      countdownEl.innerHTML = '';
+      parts.forEach(p => {
+        const div = document.createElement('div');div.className='item';
+        div.innerHTML = `<div class="num" id="cd-${p}">--</div><div class="lbl">${p}</div>`;
+        countdownEl.appendChild(div);
+      });
+
+      function tick(){
+        const now = new Date();
+        const diff = date - now;
+        if(diff <= 0){
+          document.getElementById('cd-days').textContent='00';
+          document.getElementById('cd-hours').textContent='00';
+          document.getElementById('cd-minutes').textContent='00';
+          document.getElementById('cd-seconds').textContent='00';
+          clearInterval(timer);
+          // optional: reveal a message
+          document.getElementById('message').textContent = 'We are back online — please refresh the page.';
+          return;
+        }
+        const s = Math.floor(diff/1000);
+        const days = Math.floor(s/86400);
+        const hours = Math.floor((s%86400)/3600);
+        const minutes = Math.floor((s%3600)/60);
+        const seconds = s%60;
+        document.getElementById('cd-days').textContent = pad(days);
+        document.getElementById('cd-hours').textContent = pad(hours);
+        document.getElementById('cd-minutes').textContent = pad(minutes);
+        document.getElementById('cd-seconds').textContent = pad(seconds);
+      }
+      tick();
+      const timer = setInterval(tick,1000);
+    }
+
+    if(CONFIG.useCountdown){
+      // parse date
+      const d = new Date(CONFIG.reopenDateISO);
+      if(!isNaN(d)){
+        makeCountdown(d);
+        countdownEl.style.display = 'flex';
+      } else {
+        countdownEl.style.display = 'none';
+      }
+    } else {
+      countdownEl.style.display = 'none';
+    }
+
+    // form
+    const emailInput = document.getElementById('email');
+    const notifyBtn = document.getElementById('notifyBtn');
+    const contactBtn = document.getElementById('contactBtn');
+
+    function isValidEmail(e){
+      return /\S+@\S+\.\S+/.test(e);
+    }
+
+    notifyBtn.addEventListener('click', async () => {
+      const email = emailInput.value.trim();
+      if(!isValidEmail(email)){
+        alert('Please enter a valid email address.');
+        emailInput.focus();
+        return;
+      }
+
+      notifyBtn.disabled = true;
+      notifyBtn.textContent = 'Sending...';
+
+      try{
+        if(CONFIG.emailEndpoint){
+          // real endpoint: POST JSON {email}
+          await fetch(CONFIG.emailEndpoint, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});
+          alert('Thanks — we will notify you.');
+        } else {
+          // client-only demo: store in localStorage
+          const key = 'close-page-subs';
+          const list = JSON.parse(localStorage.getItem(key) || '[]');
+          if(!list.includes(email)) list.push(email);
+          localStorage.setItem(key, JSON.stringify(list));
+          alert('Thanks — your email was saved (demo).');
+        }
+      }catch(err){
+        console.error(err);
+        alert('There was a problem saving your email. Try again later.');
+      } finally {
+        notifyBtn.disabled = false;
+        notifyBtn.textContent = 'Notify me';
+      }
+    });
+
+    contactBtn.addEventListener('click', () => {
+      window.location.href = 'mailto:' + CONFIG.contactEmail + '?subject=' + encodeURIComponent(CONFIG.siteName + ' — Contact about site closure');
+    });
+
+    // accessibility: focus first input on load
+    window.addEventListener('load', () => { emailInput.focus(); });
+  </script>
 </body>
-    <!-- NOT YET RELEASED  <script src="script.js"></script>-->
-
 </html>
-
-
-
