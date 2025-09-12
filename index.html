@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Site Closed — We'll be Back Soon</title>
+  <title>Site Closed — TechzyNerd</title>
   <style>
     :root{
       --bg1:#0f172a;--bg2:#051025;--accent:#7c3aed;--accent2:#06b6d4;--text:#e6eef8;--muted:rgba(230,238,248,0.7);
@@ -22,65 +22,51 @@
       box-shadow:0 8px 24px rgba(0,0,0,0.5);
       display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;
     }
-    .logo svg{width:60px;height:60px}
+    .logo img{width:60px;height:60px}
     .brand{font-size:22px;font-weight:700;margin-top:8px}
     .tag{font-size:14px;color:var(--muted)}
     h1{margin:8px 0;font-size:26px}
     p.lead{margin:0;font-size:15px;color:var(--muted);line-height:1.5}
-    .countdown{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;justify-content:center}
-    .countdown .item{min-width:70px;background:rgba(255,255,255,0.06);padding:10px;border-radius:10px;text-align:center}
-    .countdown .num{font-weight:700;font-size:18px}
-    .countdown .lbl{font-size:12px;color:var(--muted);margin-top:4px}
-    .form{width:100%;display:flex;flex-direction:column;gap:10px;margin-top:16px}
-    label{font-size:13px;color:var(--muted)}
-    input[type=email]{padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:transparent;color:var(--text);font-size:14px;outline:none;width:100%;box-sizing:border-box}
-    .btn{padding:12px;border-radius:8px;border:0;background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;font-weight:600;cursor:pointer;font-size:15px;width:100%}
     .small{font-size:13px;color:var(--muted)}
     footer{margin-top:10px;font-size:12px;color:var(--muted)}
     @media (max-width:400px){
       h1{font-size:22px}
       .brand{font-size:18px}
-      .countdown .item{min-width:60px}
     }
   </style>
 </head>
 <body>
   <article class="card">
     <div class="logo">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="40" height="40" rx="8" fill="url(#g)"/><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs></svg>
-      <div class="brand" id="brand">Your Site</div>
-      <div class="tag">Temporarily closed</div>
+      <img src="Images/Logo.png" alt="TechzyNerd logo">
+      <div class="brand" id="brand">TechzyNerd</div>
+      <div class="tag">Closed</div>
     </div>
-    <h1 id="title">We'll be back soon</h1>
-    <p class="lead" id="message">We're doing some maintenance and making improvements. Thanks for your patience — sign up and we'll notify you when we're back online.</p>
-    <div class="countdown" id="countdown"></div>
-    <div class="form">
-      <label for="email">Get notified when we're back</label>
-      <input id="email" type="email" placeholder="you@domain.com" />
-      <button class="btn" id="notifyBtn">Notify me</button>
-      <button class="btn" id="contactBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:var(--text)">Contact</button>
+    <h1 id="title">I’ve closed this site</h1>
+
+    <p class="lead" id="message">
+      Hi, I’m the person behind TechzyNerd.<br>
+      I don’t have motivation or anyone giving me feedback anymore, so I’ve decided to close this project for now.<br>
+      I’ve been feeling alone and anxious, and I need to step back.<br>
+      Thank you for visiting and supporting me while this site was live.
+    </p>
+    <p class="lead">
+      If you really want to read more, check the
+      <a href="https://techzynerd.com/about">About page</a>.
+    </p>
+
+    <div class="small">
+      If you still want to reach me, you can email
+      <a id="contactEmail" href="mailto:support@techzynerd.example">support@techzynerd.example</a>
     </div>
-    <div class="small">Need to reach us urgently? Email <a id="contactEmail" href="mailto:support@example.com">support@example.com</a></div>
-    <footer>If you are the site owner, edit <code>close.html</code> and adjust the <code>CONFIG</code> object in the script.</footer>
+    <footer>Made with love but taking a break for my time</footer>
   </article>
   <script>
-    const CONFIG={siteName:'TechzyNerd',title:"We're temporarily closed",message:"We're making improvements. Thanks for your patience — sign up and we'll notify you when we're back online.",contactEmail:'support@techzynerd.example',useCountdown:false,reopenDateISO:'2025-10-01T09:00:00+01:00',emailEndpoint:null};
-    document.getElementById('brand').textContent=CONFIG.siteName;
-    document.getElementById('title').textContent=CONFIG.title;
-    document.getElementById('message').textContent=CONFIG.message;
-    const contactEmail=document.getElementById('contactEmail');contactEmail.href='mailto:'+CONFIG.contactEmail;contactEmail.textContent=CONFIG.contactEmail;
-    function pad(n){return String(n).padStart(2,'0')}
-    const countdownEl=document.getElementById('countdown');
-    function makeCountdown(date){
-      const parts=['days','hours','minutes','seconds'];
-      countdownEl.innerHTML='';parts.forEach(p=>{const div=document.createElement('div');div.className='item';div.innerHTML=`<div class="num" id="cd-${p}">--</div><div class="lbl">${p}</div>`;countdownEl.appendChild(div)});
-      function tick(){const now=new Date();const diff=date-now;if(diff<=0){['days','hours','minutes','seconds'].forEach(p=>document.getElementById('cd-'+p).textContent='00');clearInterval(timer);document.getElementById('message').textContent='We are back online — please refresh the page.';return;}const s=Math.floor(diff/1000);const days=Math.floor(s/86400);const hours=Math.floor((s%86400)/3600);const minutes=Math.floor((s%3600)/60);const seconds=s%60;document.getElementById('cd-days').textContent=pad(days);document.getElementById('cd-hours').textContent=pad(hours);document.getElementById('cd-minutes').textContent=pad(minutes);document.getElementById('cd-seconds').textContent=pad(seconds)}tick();const timer=setInterval(tick,1000)}
-    if(CONFIG.useCountdown){const d=new Date(CONFIG.reopenDateISO);if(!isNaN(d)){makeCountdown(d);countdownEl.style.display='flex'}else{countdownEl.style.display='none'}}else{countdownEl.style.display='none'}
-    const emailInput=document.getElementById('email');const notifyBtn=document.getElementById('notifyBtn');const contactBtn=document.getElementById('contactBtn');
-    function isValidEmail(e){return /\S+@\S+\.\S+/.test(e)}
-    notifyBtn.addEventListener('click',async()=>{const email=emailInput.value.trim();if(!isValidEmail(email)){alert('Please enter a valid email address.');emailInput.focus();return;}notifyBtn.disabled=true;notifyBtn.textContent='Sending...';try{if(CONFIG.emailEndpoint){await fetch(CONFIG.emailEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});alert('Thanks — we will notify you.')}else{const key='close-page-subs';const list=JSON.parse(localStorage.getItem(key)||'[]');if(!list.includes(email))list.push(email);localStorage.setItem(key,JSON.stringify(list));alert('Thanks — your email was saved (demo).')}}catch(err){console.error(err);alert('There was a problem saving your email. Try again later.')}finally{notifyBtn.disabled=false;notifyBtn.textContent='Notify me'}});
-    contactBtn.addEventListener('click',()=>{window.location.href='mailto:'+CONFIG.contactEmail+'?subject='+encodeURIComponent(CONFIG.siteName+' — Contact about site closure')});
-    window.addEventListener('load',()=>{emailInput.focus()});
+    // Set your contact email if you want
+    const contactEmail='support@techzynerd.example';
+    const contactEl=document.getElementById('contactEmail');
+    contactEl.href='mailto:'+contactEmail;
+    contactEl.textContent=contactEmail;
   </script>
 </body>
 </html>
