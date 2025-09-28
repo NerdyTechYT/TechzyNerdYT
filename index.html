@@ -1,74 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Site Closed — TechzyNerd</title>
-  <style>
-    :root{
-      --bg1:#0f172a;--bg2:#051025;--accent:#7c3aed;--accent2:#06b6d4;--text:#e6eef8;--muted:rgba(230,238,248,0.7);
-      font-family:Inter,system-ui,sans-serif;
-    }
-    html,body{height:100%;margin:0;padding:0}
-    body{
-      display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(180deg,var(--bg1),var(--bg2));
-      color:var(--text);-webkit-font-smoothing:antialiased;padding:16px;box-sizing:border-box;
-    }
-    .card{
-      width:100%;max-width:600px;
-      background:rgba(255,255,255,0.04);
-      border-radius:16px;padding:24px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.5);
-      display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;
-    }
-    .logo img{width:60px;height:60px}
-    .brand{font-size:22px;font-weight:700;margin-top:8px}
-    .tag{font-size:14px;color:var(--muted)}
-    h1{margin:8px 0;font-size:26px}
-    p.lead{margin:0;font-size:15px;color:var(--muted);line-height:1.5}
-    .small{font-size:13px;color:var(--muted)}
-    footer{margin-top:10px;font-size:12px;color:var(--muted)}
-    @media (max-width:400px){
-      h1{font-size:22px}
-      .brand{font-size:18px}
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechzyNerd - Home</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/blog.css">
 </head>
 <body>
-  <article class="card">
-    <div class="logo">
-      <img src="Images/Logo.png" alt="TechzyNerd logo">
-      <div class="brand" id="brand">TechzyNerd</div>
-      <div class="tag">Closed</div>
-    </div>
-    <h1 id="title">I’ve closed this site</h1>
+  <header>
+<nav class="navbar">
+  <div class="logo"><a href="https://techzynerd.com">TechzyNerd</a></div>
 
-    <p class="lead" id="message">
-      Hi, I’m the person behind TechzyNerd.<br>
-      I don’t have motivation or anyone giving me feedback anymore, so I’ve decided to close this project for now.<br>
-      I’ve been feeling a bit sad  and anxious, and I need to step back.<br>
-      Thank you for visiting and supporting me while this site was live.
-    </p>
-    <p class="lead">
-      If you really want to read more, check the
-      <a href="https://techzynerd.com/about">About page</a>.
-    </p>
+  <!-- Hamburger Button -->
+  <button class="menu-toggle" id="menu-toggle">&#9776;</button>
 
-    <div class="small">
-      If you still want to reach me, you can email
-      <a id="contactEmail" href="mailto:nerdztechyt@gmail.com">nerdztechyt@gmail.com</a>
+  <!-- Side Menu -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="https://techzynerd.com/about">About</a></li>
+    <li><a href="https://techzynerd.com/project">Projects</a></li>
+    <li><a href="https://techzynerd.com/blogs">Blogs</a></li>
+    <li><a href="https://techzynerd.com/Contact">Contact</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero">
+      <h1>Welcome to TechzyNerd</h1>
+      <p>Your hub for tech tutorials, projects, and insightful blogs.</p>
+      <a href="#projects" class="btn-primary">Explore Projects</a>
+    </section>
+<!-- About Me Section -->
+<section id="about" class="section about">
+  <div class="about-container">
+    <!-- Left side: text -->
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm <strong>Techzy Nerd</strong> — a student, tech enthusiast, and creator.  
+        I love building websites, exploring programming, and sharing knowledge with others.  
+        My goal? To make tech simple, fun, and accessible for everyone.
+      </p>
+      <p>
+        On this site you'll find my personal projects, tutorials, and videos.  
+        When I'm not coding, I'm probably tinkering with gadgets or creating digital art.
+      </p>
+      <a href="about.html" class="btn-secondary">Learn More</a>
     </div>
-    <footer>Made with love but taking a break for my time</footer>
-  </article>
-  <script>
-    // Set your contact email if you want
-    const contactEmail='nerdztechyt@gmail.com';
-    const contactEl=document.getElementById('contactEmail');
-    contactEl.href='mailto:'+contactEmail;
-    contactEl.textContent=contactEmail;
-  </script>
+
+    <!-- Right side: image -->
+    <div class="about-image">
+      <img src="Images/Logo.png" alt="Techzy Nerd Profile Picture" />
+    </div>
+  </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+      <div class="cards-grid">
+        <article class="project-card">
+          <h3>WP website</h3>
+          <p>I created a WP website for myself and it looked good but now I moved to coded site.</p>
+          <a href="https://speefyleef.unaux.com/?i=1" class="btn-secondary" target="_blank" rel="noopener noreferrer">View Project</a>
+        </article>
+        <article class="project-card">
+          <h3>StopWatch</h3>
+          <p>I created a StopWatch using HTML, CSS, and JavaScript. It looks amazing!</p>
+          <a href="#" class="btn-secondary">View Project</a>
+        </article>
+        <article class="project-card">
+          <h3>Scratch Animation</h3>
+          <p>I created a Scratch animation that was featured on the Scratch homepage — amazing, right?</p>
+          <a href="https://scratch.mit.edu/projects/1159094965/" class="btn-secondary" target="_blank" rel="noopener noreferrer">View Project</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="section">
+      <h2>Recent Videos</h2>
+      <div class="videos-grid">
+        <article class="video-card">
+          <iframe src="https://www.youtube.com/embed/eRocTLvJiMg" title="Is Your Desktop a Mess? Try This 1 Tip for an Easy Fix!" allowfullscreen></iframe>
+          <h4>Is Your Desktop a Mess? Try This 1 Tip for an Easy Fix!</h4>
+        </article>
+        <article class="video-card">
+          <iframe src="https://www.youtube.com/embed/5cDfhQQzDvg" title="Techzy Nerd Beta Website Launch" allowfullscreen></iframe>
+          <h4>🌐 I Present You... Techzy Nerd Beta Website Launch 🚀</h4>
+        </article>
+        <article class="video-card">
+          <iframe src="https://www.youtube.com/embed/TT0wYXMHTuQ" title="Build a Website with ChatGPT Tutorial" allowfullscreen></iframe>
+          <h4>Build a Website with ChatGPT in 3 Minutes (Step-by-Step Tutorial)</h4>
+        </article>
+      </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section id="blogs" class="section">
+      <h2>Recent Blogs</h2>
+      <div class="blogs-list">
+        <article class="blog-post">
+          <h3>Youtube Launch</h3>
+          <p>My Youtube Launch Click to Learn More.</p>
+          <a href="BlogsPosts/welcome.html" class="btn-secondary">Read More</a>
+        </article>
+        <!--<article class="blog-post"> -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 TechzyNerd. All rights reserved.</p>
+  </footer>
+  <script src="js/main.js"></script>
+
 </body>
+    <!-- NOT YET RELEASED  <script src="script.js"></script>-->
+
 </html>
-
-
